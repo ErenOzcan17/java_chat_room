@@ -13,7 +13,7 @@ public class Client implements Runnable{
     @Override
     public void run(){
         try {
-            Socket client = new Socket("127.0.0.1", 9999);
+            Socket client = new Socket("10.138.135.133", 9999);
             out = new PrintWriter(client.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 
@@ -65,7 +65,7 @@ public class Client implements Runnable{
             }
         }
     }
-
+//sa3131
     public static void main(String[] args) {
         Client client = new Client();
         client.run();
